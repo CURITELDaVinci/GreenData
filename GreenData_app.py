@@ -279,7 +279,7 @@ def plot_state():
     #FIPSs.columns = ['State', 'County', 'FIPS']
     #FIPSs['FIPS'].fillna(0, inplace = True)
     #FIPSs['FIPS'] = FIPSs.FIPS.astype(int).astype(str).str.zfill(5)
-    @st.cache(ttl=3*60*60, suppress_st_warning=True)
+    @st.cache_data(ttl=3*60*60, suppress_st_warning=True)
     def get_testing_data_state():
             apiKey = '9fe19182c5bf4d1bb105da08e593a578'
             st.text('Getting testing data for California State')
@@ -413,7 +413,7 @@ def plot_state():
         st.pyplot(fig)
     
         
-@st.cache(ttl=3*60*60, suppress_st_warning=True)
+@st.cache_data(ttl=3*60*60, suppress_st_warning=True)
 def get_data():
     US_confirmed = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv'
     US_deaths = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv'
