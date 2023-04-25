@@ -260,9 +260,9 @@ def plot_county(county):
 
     with _lock:
         if len(county)<6:
-            fig.suptitle('Current situation of COVID-19 cases in '+', '.join(map(str, county))+' county ('+ str(today)+')')
+            fig.suptitle('Current situation of GreenData cases in '+', '.join(map(str, county))+' county ('+ str(today)+')')
         else:
-            fig.suptitle('Current situation of COVID-19 cases in California ('+ str(today)+')')
+            fig.suptitle('Current situation of GreenData cases in California ('+ str(today)+')')
         fig.tight_layout(rect=[0, 0.03, 1, 0.95])
         st.pyplot(fig)
     
