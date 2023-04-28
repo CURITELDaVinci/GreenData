@@ -3,3 +3,4 @@ matplotlib
 seaborn
 datetime
 streamlit>=0.65
+plotly
